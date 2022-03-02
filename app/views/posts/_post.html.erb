@@ -1,0 +1,22 @@
+<li id="<%= dom_id(post) %>">
+  <div>
+    <div><%= link_to post.title, post_path(post) %></div>
+    posted by <%= post.user.name %>
+  </div>
+  <div class="d-flex">
+    <div class="ms-auto">
+      <% if current_user&.mine?(post) %>
+        <div class="text-end">
+          <%= link_to '編集', edit_post_path(post), class: 'btn btn-success btn-sm' %>
+          <%= link_to '削除',
+                      post_path(post),
+                      class: 'btn btn-danger btn-sm',
+                      method: :delete,
+                      data: { confirm: '削除します' } %>
+        </div>
+      <% end %>
+      <%= l post.created_at, format: :long %>
+    </div>
+  </div>
+  <hr>
+</li>

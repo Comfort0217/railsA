@@ -1,0 +1,13 @@
+<%= form_with model: post do |f| %>
+  <%= render 'shared/error_message', object: f.object %>
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control', rows: 5 %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary'  %>
+<% end %>

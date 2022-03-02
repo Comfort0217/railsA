@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    models:
+      post: ポスト
+      comment: コメント
+      user: ユーザ
+      profile: プロフィール
+    attributes:
+      post:
+        title: タイトル
+        body: 内容
+      comment:
+        body: コメント
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+      profile:
+        name: ニックネーム
+  activemodel:
+    attributes:
+      sign_up_form:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+        name: ニックネーム

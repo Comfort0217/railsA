@@ -1,0 +1,7 @@
+<li id="<%= dom_id(comment) %>">
+  <div>
+    <%= simple_format comment.body %>
+  </div>
+  commented by <%= comment.user.name %>
+  <hr>
+</li>

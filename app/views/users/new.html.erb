@@ -1,0 +1,32 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <div class="card"  style="width: 400px;">
+    <div class="card-header">
+      サインアップ
+    </div>
+    <div class="card-body">
+      <%= form_with model: @sign_up_form, url: sign_up_path do |f| %>
+        <%= render 'shared/error_message', object: f.object %>
+        <div class="mb-3">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <div>
+          <%= f.submit 'サインアップ', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
