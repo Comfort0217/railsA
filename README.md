@@ -18,15 +18,10 @@ $ yarn
 ```
 
 ## 起動
-それぞれ別タブで起動する必要があります
-
 ```
 $ bin/rails s
 ```
 
-```
-$ bin/webpack-dev-server
-```
 
 ## テスト
 
