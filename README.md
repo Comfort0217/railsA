@@ -1,5 +1,10 @@
 # README
 
+## Dependencies
+- ruby
+- yarn
+- mysql
+
 ## Rubyバージョン 
 - `.ruby-version`を参照してください
 
