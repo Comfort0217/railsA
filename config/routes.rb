@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     resources :comments, module: :posts
   end
 
+  resources :tags do
+    get 'posts', to: 'posts#search'
+  end
+
   if Rails.env.development? || Rails.env.test?
     get 'login_as/:user_id', to: 'development/sessions#login_as'
   end

@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  before_action :set_search
+
+  def set_search
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).includes(:tags).order(created_at: :desc).page(params[:page]).per(10)
+  end
+
   private
 
   def current_user

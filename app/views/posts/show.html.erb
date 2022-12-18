@@ -19,6 +19,13 @@
       </h2>
       <%= simple_format(@post.body) %>
     </div>
+    <div class="card-footer">
+    <% @post_tags.each do |tag| %>
+    <a class="badge rounded-pill bg-primary text-decoration-none text-white">
+      <%= tag.tag_name %>
+      </a>
+      <% end %>
+    </div>
   </div>
   <div class="card mb-3">
     <div class="card-header">

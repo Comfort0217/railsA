@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :post do
-    title { Faker::Lorem.sentence }
+  factory :comment do
     body { Faker::Lorem.sentence }
-    user
+    user { nil }
+    post { nil }
   end
 end

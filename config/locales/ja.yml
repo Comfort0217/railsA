@@ -9,6 +9,7 @@ ja:
       post:
         title: タイトル
         body: 内容
+        tag_name: タグ
       comment:
         body: コメント
       user:

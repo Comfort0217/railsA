@@ -1,4 +1,9 @@
-<li id="<%= dom_id(post) %>">
+<div class="container">
+  <div class="row">
+    <div class="col">
+<ul class="list-unstyled">
+<% @posts.each do |post| %>
+<li>
   <div>
     <div><%= link_to post.title, post_path(post) %></div>
     posted by <%= post.user.name %>
@@ -25,3 +30,10 @@
   </div>
   <hr>
 </li>
+<% end %>
+</ul>
+</div>
+</div>
+</div>
+
+
