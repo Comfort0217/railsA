@@ -20,7 +20,7 @@
       <%= simple_format(@post.body) %>
     </div>
     <div class="card-footer">
-    <% @post_tags.each do |tag| %>
+    <% @post.tags.each do |tag| %>
     <a class="badge rounded-pill bg-primary text-decoration-none text-white">
       <%= tag.tag_name %>
       </a>
